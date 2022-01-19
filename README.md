@@ -2,7 +2,7 @@
 2021 동계 계절학기 - 소프트웨어공학및설계
 
 
-1.templates
+### 1.templates
 
 * edit.html : 글 편집 기능을 위한 html 파일
 
@@ -14,13 +14,13 @@
 
 * view.html : 글 상세보기, 편집, 삭제, 댓글 추가, 댓글 삭제 기능을 위한 html파일
 
-2. please.py
+### 2. please.py
     -플라스크를 이용하여 render_template, DB 연결 등을 위한 파이썬 파일
 
-3. message.db
+### 3. message.db
     -SQLite3을 이용한 DB파일
     -messages : 게시글 정보에 관한 데이터
     -comments : 댓글 정보에 관한 데이터
 
-4. User Manual URL
+### 4. User Manual URL
 	https://youtu.be/l-RaDTI5BrM
