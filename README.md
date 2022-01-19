@@ -2,10 +2,10 @@
 2021 동계 계절학기 - 소프트웨어공학및설계
 
 ### About Project
-	<https://silicon-derby-1a4.notion.site/2021-b0e517ae3e27496ab59c6d83e43b8a36>
+	[notion](https://silicon-derby-1a4.notion.site/2021-b0e517ae3e27496ab59c6d83e43b8a36)
 
 ### User Manual URL
-	<https://youtu.be/l-RaDTI5BrM>
+	[manual(https://youtu.be/l-RaDTI5BrM)
 	
 ### 1.templates
 
