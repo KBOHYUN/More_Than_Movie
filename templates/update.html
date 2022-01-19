@@ -1,0 +1,23 @@
+<!doctype html> 
+<html>
+    <h1 style="margin-top: 50px; position:relative; left: 40%;">More Than Movie</h1>
+    <body>
+        <div style="position:relative; left: 20%;">
+            <table border = 1>
+                <thead>
+                    <td>Number</td>
+                    <td>Title</td>
+                    <td>Content</td>
+                </thead>
+                {% for row in row %}
+                <tr>
+                    <td> {{loop.index}} </th> 
+                    <td> {{ row["TITLE"] }}</td>
+                    <td> {{ row["CONTENT"] }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+        </div>
+       
+   </body>
+</html>

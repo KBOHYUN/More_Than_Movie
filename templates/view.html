@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: 'Do Hyeon', sans-serif;
+            }
+            table.table1 {
+                border-collapse: collapse;
+                text-align: center;
+                border: 1px solid #ccc;
+                margin-left: 10px;
+                width: 60%;
+                }
+             table.table1 td {
+                text-align: center;
+                line-height: 1.5;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid black;
+                margin: 20px 20px 20px 20px;
+                height: 50px;
+   
+                }
+            table.table1 th {
+                border: none;
+                background: #e7708d;
+                color: white;
+                margin: 20px 20px 20px 20px;
+                height: 50px;
+                width: 30%;
+            }
+            input.input2{
+                width: 50%;
+                height: 30px;
+                margin:10px;
+                border: 1px solid black;
+                font-family: 'Do Hyeon', sans-serif;
+                }
+            input.input3{
+                background-color:#f4a460;
+                width: 120px;
+                height: 30px;
+                color: black;
+                border: none;
+                border-radius: 5px;
+                margin-right: 10px;
+                margin-left: 10px;
+                font-family: 'Do Hyeon', sans-serif;
+            }
+
+        </style>
+    </head>
+   <body>
+    <h1 style="margin-top: 50px; position:relative; left: 44%;">More Than Movie</h1>
+
+        <div style="position:relative; left: 20%;">
+            <table class="table1" border = 1>
+                {% for key, value in result.items() %}
+            <tr>
+                <th> {{ key }} </th>
+            </tr>
+            <tr>
+                <td> {{ value }} </td>
+            </tr>
+            {% endfor %}
+            </table>
+
+            <div>
+                <table style="position:relative; left: 20%; margin-top: 20px; border-collapse: collapse;text-align: center;border:none;width: 10%;">
+                    {% for key, value in result.items() %}
+                <tr>
+                    <td><form action = "http://127.0.0.1:5000/editClick" method = "POST">
+                        <input type = "hidden" name = "title" value="{{key}}"/>
+                        <input class="input3" type = "submit" value = "Edit"/>
+                    </form></td>
+                    <td><form action = "http://127.0.0.1:5000/delete" method = "POST">
+                        <input type = "hidden" name = "title" value="{{key}}"/>
+                        <input class="input3" type = "submit" value = "Delete"/>
+                    </form></td>
+                </tr>
+                {% endfor %}
+                </table>
+
+            <h3 style="margin-top: 50px;"><b style="margin-top: 50px; margin-left: 20px;">Comment</b></h3>
+            {% for key, value in result.items() %}
+            <form action = "http://127.0.0.1:5000/addComment" method = "POST">
+                <input type = "hidden" name = "title" value="{{key}}"/>
+                <input type = "hidden" name = "content" value="{{value}}"/>
+                <input class="input2" type = "text" name = "comment"/>
+                <input class="input3" type = "submit" value = "Add Comment"/>
+            </form>
+            {% endfor %}
+
+            <table class="table1" border = 1>
+                {% for com in comResult -%}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ com["COMMENT"] }}</td>
+                    <td><form action = "http://127.0.0.1:5000/deleteComment" method = "POST">
+                        <input type = "hidden" name = "title" value="{{ com['TITLE'] }}"/>
+                        <input type = "hidden" name = "comment" value="{{ com['COMMENT'] }}"/>
+                        <input class="input3" style="margin-top: 10px;" type = "submit" value = "Delete Comment"/>
+                        </form>
+                    </td>
+                </tr>
+                {%- endfor %}
+            </table>
+        </div>    
+    </div>
+
+   
+   </body>
+
+   
+</html>
