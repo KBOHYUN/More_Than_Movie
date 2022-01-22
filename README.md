@@ -19,7 +19,7 @@
 
 	view.html : 글 상세보기, 편집, 삭제, 댓글 추가, 댓글 삭제 기능을 위한 html파일
 
-### 2. please.py
+### 2. flask.py
     -플라스크를 이용하여 render_template, DB 연결 등을 위한 파이썬 파일
 
 ### 3. message.db
