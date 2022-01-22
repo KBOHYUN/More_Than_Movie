@@ -4,7 +4,7 @@
 ### About Project
 <https://silicon-derby-1a4.notion.site/2021-b0e517ae3e27496ab59c6d83e43b8a36>
 
-### User Manual URL
+### User Manual Youtube
 <https://youtu.be/l-RaDTI5BrM>
 	
 ### 1.templates
